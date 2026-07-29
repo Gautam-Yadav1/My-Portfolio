@@ -166,43 +166,26 @@ const Contact = () => {
       return;
     }
 
-    const apiKey = process.env.REACT_APP_RESEND_API_KEY;
-    const fromAddress = process.env.REACT_APP_RESEND_FROM_EMAIL;
-    const toAddress = process.env.REACT_APP_RESEND_TO_EMAIL || fromAddress;
-
-    if (!apiKey || !fromAddress || !toAddress) {
-      showToast('Resend is not configured yet. Please add your API keys in the environment variables.', 'error');
-      return;
-    }
-
     setIsSending(true);
 
     try {
-      const response = await fetch('https://api.resend.com/emails', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          from: fromAddress,
-          to: [toAddress],
-          reply_to: fromEmail,
-          subject: `Portfolio Contact: ${subject}`,
-          html: `
-            <p><strong>Name:</strong> ${fromName}</p>
-            <p><strong>Email:</strong> ${fromEmail}</p>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong></p>
-            <p>${message.replace(/\n/g, '<br />')}</p>
-          `,
+          from_name: fromName,
+          from_email: fromEmail,
+          subject,
+          message,
         }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.message || 'Unable to send the message right now.');
+        throw new Error(data?.error || 'Unable to send the message right now.');
       }
 
       form.current.reset();

@@ -2,14 +2,14 @@ export const Bio = {
   name: "Gautam Yadav",
   roles: [
     "Frontend Developer",
-    "React.js & Vue.js Specialist",
+    "Reactjs & Vuejs Specialist",
     "AI Automation Engineer",
   ],
   description:
     "Frontend Developer with 2+ years of experience building high-performance web applications with React.js, Vue.js, Nuxt.js, and TypeScript. I specialize in state management, REST APIs, testing, CI/CD, and AI automation workflows using n8n, GHL, Twilio, and ElevenLabs.",
   github: "https://github.com/Gautam-Yadav1",
   resume:
-    "https://drive.google.com/file/d/1tqSmwJZ_WfSfvGhQdk-wQZUWf77pz_qX/view?usp=sharing",
+    "https://drive.google.com/file/d/1icn7eFFnnu9AS255yiaoxTlauMSqNqzk/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/gautamyadav1",
   twitter: "https://twitter.com/Yrahull595",
   insta: "https://www.instagram.com/yrahull595/",
@@ -133,26 +133,6 @@ export const skills = [
     ],
   },
   {
-    title: "Android",
-    skills: [
-      {
-        name: "Java",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      },
-      // {
-      //   name: "Kotlin",
-      //   image:
-      //     "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
-      // },
-      // {
-      //   name: "XML",
-      //   image:
-      //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-      // },
-    ],
-  },
-  {
     title: "Others",
     skills: [
       {
@@ -193,7 +173,7 @@ export const skills = [
       {
         name: "ElevenLabs",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/7/7d/Eleven_Labs_logo.svg",
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAFVBMVEX///+VlZUGBgZKSkqQkJAAAAA7Ozty6ML+AAAAHElEQVR4AWMYUCBkwKyIxHVNYAsZVFyEIwcSAADWIQrDIppSoAAAAABJRU5ErkJggg==",
       },
       {
         name: "Postman",
