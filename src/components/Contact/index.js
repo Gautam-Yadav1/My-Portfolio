@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+import { useRef, useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+import { useToast } from '../ToastProvider';
 
 const Container = styled.div`
 display: flex;
@@ -118,28 +118,101 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  ${({ disabled }) => disabled && `
+    opacity: 0.7;
+    cursor: not-allowed;
+  `}
 `
 
-
+const FloatingWhatsApp = styled.a`
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  text-decoration: none;
+  font-size: 30px;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.08);
+  }
+`
 
 const Contact = () => {
-
-  //hooks
-  const [open, setOpen] = React.useState(false);
+  const { showToast } = useToast();
+  const [isSending, setIsSending] = useState(false);
   const form = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+
+    const formData = new FormData(form.current);
+    const fromEmail = formData.get('from_email')?.toString().trim();
+    const fromName = formData.get('from_name')?.toString().trim();
+    const subject = formData.get('subject')?.toString().trim();
+    const message = formData.get('message')?.toString().trim();
+
+    if (!fromEmail || !fromName || !subject || !message) {
+      showToast('Please fill out all fields before sending.', 'error');
+      return;
+    }
+
+    const apiKey = process.env.REACT_APP_RESEND_API_KEY;
+    const fromAddress = process.env.REACT_APP_RESEND_FROM_EMAIL;
+    const toAddress = process.env.REACT_APP_RESEND_TO_EMAIL || fromAddress;
+
+    if (!apiKey || !fromAddress || !toAddress) {
+      showToast('Resend is not configured yet. Please add your API keys in the environment variables.', 'error');
+      return;
+    }
+
+    setIsSending(true);
+
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          from: fromAddress,
+          to: [toAddress],
+          reply_to: fromEmail,
+          subject: `Portfolio Contact: ${subject}`,
+          html: `
+            <p><strong>Name:</strong> ${fromName}</p>
+            <p><strong>Email:</strong> ${fromEmail}</p>
+            <p><strong>Subject:</strong> ${subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message.replace(/\n/g, '<br />')}</p>
+          `,
+        }),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.message || 'Unable to send the message right now.');
+      }
+
+      form.current.reset();
+      showToast('Email sent successfully!', 'success');
+    } catch (error) {
+      showToast(error.message || 'Something went wrong while sending the email.', 'error');
+    } finally {
+      setIsSending(false);
+    }
   }
-
-
 
   return (
     <Container>
@@ -148,19 +221,15 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
+          <ContactInput placeholder="Your Email" name="from_email" type="email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactButton type="submit" value={isSending ? 'Sending...' : 'Send'} disabled={isSending} />
         </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+        <FloatingWhatsApp href="https://wa.me/916263131211?text=Hi%20Gautam%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" aria-label="Chat on WhatsApp">
+          <FaWhatsapp />
+        </FloatingWhatsApp>
       </Wrapper>
     </Container>
   )

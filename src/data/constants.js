@@ -1,12 +1,12 @@
 export const Bio = {
   name: "Gautam Yadav",
   roles: [
-    "Full Stack Developer",
-    "UI/UX Designer",
-    "Programmer",
+    "Frontend Developer",
+    "React.js & Vue.js Specialist",
+    "AI Automation Engineer",
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "Frontend Developer with 2+ years of experience building high-performance web applications with React.js, Vue.js, Nuxt.js, and TypeScript. I specialize in state management, REST APIs, testing, CI/CD, and AI automation workflows using n8n, GHL, Twilio, and ElevenLabs.",
   github: "https://github.com/Gautam-Yadav1",
   resume:
     "https://drive.google.com/file/d/1tqSmwJZ_WfSfvGhQdk-wQZUWf77pz_qX/view?usp=sharing",
@@ -21,19 +21,44 @@ export const skills = [
     title: "Frontend",
     skills: [
       {
-        name: "React Js",
+        name: "React.js",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
       },
-      // {
-      //   name: "Redux",
-      //   image:
-      //     "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-      // },
       {
-        name: "Next Js",
+        name: "Redux",
         image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+          "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
+      },
+      {
+        name: "Next.js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        name: "TypeScript",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
+      },
+      {
+        name: "Vue.js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg",
+      },
+      {
+        name: "Nuxt.js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nuxtjs/nuxtjs-original.svg",
+      },
+      {
+        name: "Pinia",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/0/07/Pinia_Logo.svg",
       },
       {
         name: "HTML",
@@ -155,48 +180,99 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
-      // {
-      //   name: "Postman",
-      //   image:
-      //     "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
-      // },
+      {
+        name: "n8n",
+        image:
+          "https://seeklogo.com/images/N/n8n-logo-0A0BDEF28B-seeklogo.com.png",
+      },
+      {
+        name: "Twilio",
+        image:
+          "https://www.vectorlogo.zone/logos/twilio/twilio-icon.svg",
+      },
+      {
+        name: "ElevenLabs",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/7/7d/Eleven_Labs_logo.svg",
+      },
+      {
+        name: "Postman",
+        image:
+          "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
+      },
       {
         name: "Adobe XD",
         image:
           "data:image/jpeg;base64,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",
       },
-      // {
-      //   name: "Figma",
-      //   image:
-      //     "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
-      // },
+      {
+        name: "Figma",
+        image:
+          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+      },
     ],
   },
 ];
 
- export const experiences = [
-   {
-     id: 0,
-     img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAlCAMAAAAgENppAAAAnFBMVEX///8AAABmY2R0cnL19fXMy8v5+flwbm9VUlPh4ODIx8f8/PyenZ3U09PZ2dnCwcGwr69bWFmYlpeJh4gPAAbn5+eRj49DP0CqqakMAAAgGhspIyVNSkvv7+/N19d+fHz5z9M4NDUYEBIWHh6stLMADxDywsf3W23uoaj0dYLvYnLqACLuCzfpABHzj5m5uLjpAAD2t7z73uD86Oqtj4GqAAABkklEQVRIie2SXXejIBCGB0SQKCh+IGpTom3TTbNdk83//287mo+LXrinZ/emPXkvhnHggXkFgLvu+mdlhfrEauuvWVL68JwpYwzN+TIozDWLimsWljbJu4dlMKA30N5AsgYYSfUXcG2lFyOztcldVdCcIciwc8IBPy2mYyAy0LgsQC+j8PoMyrItKHG+jnza9EHbsbClImoVSOJH2kHWOjck6dDlhkhXFma4gE0K8FBAlEONhvnTsxpsbnt6dt0l85+LVo0EaHH/W6tyciQ8eoxfcA62r49ThTWur1FtwCghg1kRnKsTXRKTfgThxw7gbf9zBqGzfaFCpataMMiiC4iX5Yn+CL69/9rs9vvHRlXSE2U7CZXBo9HK5UQ3OlBkum8azSANoEZHu8Ph/chXBNWPuB2OATjSNaJOyWw4wZKYWuUcpr4YBx5P428MMWPs/G7Wms2RA4OpgmuYXi+/jC+kFcer0JBBFmsVQogv93iMt5vTccNPS2CKoJJVFitQOoM0nUDYbjAug7Pi/2bgru+lP8KmG6VGI/uxAAAAAElFTkSuQmCC",
-     role: "Frontend Engineer Intern",
-     company: "InfoBeans Ltd",
-     date: "December 2024 - June 2024",
-     desc: "Developed and maintained frontend components using ReactJS. Collaborated with backend developers to integrate RESTful APIs. Participated in code reviews and contributed to improving code quality. Assisted in debugging and troubleshooting web applications.",
-     skills: [
-       "ReactJS",
-       "Redux",
-       "NodeJs",
-       "Material UI",
-       "HTML",
-       "CSS",
-       "JavaScript",
-     ],
-   },
- ]
+export const experiences = [
+  {
+    id: 0,
+    img: "https://excellencetechnologies.in/brand/logo.svg",
+    role: "Jr. Web Developer",
+    company: "Excellence Technology Pvt. Ltd.",
+    date: "Feb 2025 - Present",
+    desc: "Built reusable UI components in React.js, Vue.js, and Nuxt.js, cutting development time by 20%. Optimized rendering and state management to reduce page load time by 25% and UI bugs by 30%.",
+    skills: [
+      "React.js",
+      "Vue.js",
+      "Nuxt.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "Vuex",
+      "Pinia",
+      "REST APIs",
+      "CI/CD",
+    ],
+  },
+  {
+    id: 1,
+    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=160&q=80",
+    role: "Frontend Developer (Vue.js, React.js)",
+    company: "CredWings Services Pvt. Ltd.",
+    date: "Aug 2024 - Feb 2025",
+    desc: "Built reusable frontend interfaces across 4+ concurrent client applications. Implemented Redux Toolkit, Vuex, and Pinia while improving render speed by 20% through lazy loading and memoization.",
+    skills: [
+      "Vue.js",
+      "React.js",
+      "Redux Toolkit",
+      "Vuex",
+      "Pinia",
+      "Lazy Loading",
+      "Memoization",
+      "REST APIs",
+    ],
+  },
+  {
+    id: 2,
+    img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAMAAABNey+cAAAAllBMVEX///8AAAAuKCukoqO5uLj29vZiX2C+vb52dHUXDBF9e3zQz8+fnZ7t7e17eHnq6uoPAAVcWFpoZWZXU1U5NDZvbG3Z2NgdFRhKRkdAOz2SkJFiZ2joABAMAADEw8OHhYUoISSvrq4VIiSYoKDzkJr/x8zdxsj3coD5z9LqADHpACD+uL/we4j+9fboABjuXm7/5unzm6SbuiciAAABZUlEQVQokb2SXXeDIAyGkwoCgqKiiKxa3bqtXdd9/P8/N/DYdWdn2+VyAUngSd5wAErhYrzjq0fpl/QvNviLl4jRrq4pEbHK/wQ36uJl1WcyraxlXfUj8AOYXsE6LDv8G0wkl8Yp2rq+yHTWOLKCzgDItGk1wGwankM7Zn2bQ170tY0g6ybFB+WN87Lpsgo9pI0xk6NAUI18oBLn0WxACK6mHnqXxJoBLANv2ijVl+FB/C3UTvlM7EAkoXOzPJ9F3WUADHP0q1QWZ+E1FCn0dzG1v7+JUhmSyRhTbVLYCcRJl2EIifkOp0JfwTaCD48Ah+PTaQG1UJ1nhIwyayzVuIIa7NyX38D99vl8OL4sIC1Q97GAX8TO5aXjTIMYDUKRCLYp8DDx63a7PR7e0i58AJzBDlM7ddojrxvUuIAShRvCVWZ1iEFKkGPYD++nc4gYY2P8dHT28ZT5GQglYbKcQJ4suX+3Dxq+F2Fw1Xd9AAAAAElFTkSuQmCC",
+    role: "On-Job Trainee (Frontend Development)",
+    company: "InfoBeans Ltd.",
+    date: "Dec 2023 - Jun 2024",
+    desc: "Built 10+ reusable React.js components and integrated REST APIs powering internal business applications. Partnered with senior developers on debugging and testing, reducing reported bugs by 15% across sprints.",
+    skills: [
+      "React.js",
+      "REST APIs",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Testing",
+    ],
+  },
+];
 export const education = [
   {
     id: 0,
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/VIT_Bhopal_University_seal.svg/640px-VIT_Bhopal_University_seal.svg.png",
+    img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAMFBMVEVAQED9/f39/f37+/v8/Pz+/v7y8vL+/v76+vr+/v7+/v7+/v7+/v7+/v7+/v7+/v6/PAK4AAAAEHRSTlMBSlQxPWESzSKibP6Mue596O6KWwAAAVVJREFUKJGFUtmOxDAIC2cScv3/366TTlYzo5XWfWiFwWBoSm8QJS3pLzCHsGgJlm+KTENIUWus5h9clBAxApgp2UdxyBK7ASbpqr+cQZTTEtcl3NmjGN/BqBRGpnVJuaS5ldzs6iB/v6em7Id0C6WnkF9py1OWQyb2zi8XxH+45uMHheedxztJcnS5HFVv7c0dPaSjZ2Dw1WavveWw1Xu0QqfSeLWWGzDzRq9WY14yAqGx4zWPkSeyWubHC0sZfQ2Ex6o11wGF1kXlGSwhVOvAUzs+85zN+fHumgpICI/DDuhWdHvtHcscHceqA0m954Yt0b2puS12LgJoWJvCTtfxPgpzwv/D4k49Fb1HAbANpTBsRcxMcZU9yzmGqhbzICriZf9E+0ufYk2Udw1xKWiLFip9vZoGmsGWbqBASZhcxPnxaYpN6p3dj3LcEyHv69bu6T/8AOSaCyS+XDXvAAAAAElFTkSuQmCC",
     school: "VIT Bhopal University",
     date: "July 2022 - Aug 2024",
     grade: "8.03 CGPA",
@@ -235,51 +311,56 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Rouming Routes",
-    date: "Oct 2023 - Nov 2023",
+    title: "Casamia.co",
+    date: "2024 - Present",
     description:
-      "Designed and developed the Travel website, a project that helps users and teams stay organized and on track.",
+      "Built CMS-driven landing pages and lead-generation forms in Vue.js, increasing lead capture by 20%. Implemented dynamic UI filtering and performance optimizations to improve page load speed by 25%.",
     image:
-      "https://files.oaiusercontent.com/file-dArXH646R2B2dYIvXSbAlVfM?se=2024-11-21T12%3A05%3A51Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D12ca8979-d6cb-490c-beed-66d4259bfe56.webp&sig=DTEnz8wkcNf3iQB03uRRgZiaxvmxk2YU4OrbV/G9BK0%3D",
-    tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
-    ],
+      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80",
+    tags: ["Vue.js", "Prismic CMS", "JavaScript", "Tailwind CSS", "Lead Generation"],
     category: "web app",
-    github: "https://github.com/Gautam-Yadav1/Roaming-Routes",
-    webapp: "https://github.com/Gautam-Yadav1/Roaming-Routes",
+    github: "https://github.com/Gautam-Yadav1",
+    webapp: "https://casamia.co",
   },
   {
     id: 1,
-    title: "VIT-Result-management-System",
-    date: "Jun 2023",
+    title: "MTMPro",
+    date: "2024",
     description:
-      "This is a web application for faculties and students to upload and see their result In this application there is three profile First one is admin which can perform all the CRUD actions on the faculty and Student. Second profile is faculty profile which contains there related subject and some of their personal information. A faculty can also perform all the CRUD actions on the students but can only change themselves password and edit their personal details. Third profile is student profile in this student can only see their result and only able to change password after logging in to the profile.",
+      "Developed order-management and supplier-collaboration modules in Vue.js, cutting processing time by 20%. Diagnosed and resolved 20+ critical issues, improving platform uptime by 15%.",
     image:
-    "https://files.oaiusercontent.com/file-iHkFx1XBbh9oO2PEtaWzGhf7?se=2024-11-21T12%3A07%3A06Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D5135b958-d1ac-402a-8409-5581efc5b985.webp&sig=TNCXjpisqEm%2BVFzV0w1dbsiV7RPi8RMTINavigkDz0U%3D",
-    tags: ["React Js", "MongoDB", "AWS Auth", "Node JS","Express.js"],
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    tags: ["Vue.js", "Prismic CMS", "Performance", "Debugging", "REST APIs"],
     category: "web app",
-    github: "https://github.com/Gautam-Yadav1/VIT-Result-management-System.git",
-    webapp: "https://github.com/Gautam-Yadav1/VIT-Result-management-System.git",
+    github: "https://github.com/Gautam-Yadav1",
+    webapp: "https://mtmpro.com",
   },
   {
     id: 2,
-    title: "To Do List",
-    date: "Jun 2024",
+    title: "Odin500",
+    date: "2024",
     description:
-      "The To-Do List Web Application is a user-friendly task management tool built using React, showcasing my skills in modern web development. The application allows users to add, edit, mark as completed, and delete tasks with ease. It features a dynamic and responsive user interface, leveraging React’s useState and useEffect hooks for real-time updates and efficient state management. Tasks are saved in the browser's local storage, ensuring data persistence even after refreshing. Users can filter tasks as completed, pending, or view all, making organization simple and intuitive. Designed with mobile responsiveness in mind, the application delivers a seamless experience across devices. This project highlights my proficiency in React, JavaScript, HTML5, CSS3, and Bootstrap, reflecting my ability to create functional and visually appealing web applications.",
+      "Built real-time OHLC dashboards with TradingView charts, supporting 100+ concurrent users. Optimized backend APIs for live data rendering, handling 50+ updates per second.",
     image:
-    "https://files.oaiusercontent.com/file-NWTpXSamknKQZZPNjvLwoFp8?se=2024-11-22T11%3A36%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D0e7bba40-5233-4197-aa48-10823c6f25a9.webp&sig=8lBWdTcLYxQt/87aQ9suZwdrbdSk%2BgIPKX82LN1PVWQ%3D",
-    tags: ["React Js", "Local Storage", "CSS","HTML5"],
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+    tags: ["React.js", "TradingView", "Real-Time Dashboards", "Performance", "REST APIs"],
     category: "web app",
-    github: "https://github.com/Gautam-Yadav1/",
-    webapp: "https://github.com/Gautam-Yadav1/",
-  }
-  
+    github: "https://github.com/Gautam-Yadav1",
+    webapp: "https://odin500.com",
+  },
+  {
+    id: 3,
+    title: "AI Automation & Voice Agents",
+    date: "2024 - Present",
+    description:
+      "Built AI automation workflows for lead generation and CRM using n8n and GHL, cutting manual workload by 30%. Developed voice AI agents with Twilio and ElevenLabs, handling 200+ calls per month.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+    tags: ["n8n", "GoHighLevel", "Twilio", "ElevenLabs", "Automation"],
+    category: "web app",
+    github: "https://github.com/Gautam-Yadav1",
+    webapp: null,
+  },
 ];
 
 

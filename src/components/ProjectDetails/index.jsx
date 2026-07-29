@@ -159,22 +159,18 @@ const Button = styled.a`
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary};
-    ${({ dull, theme }) => dull && `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
-        }
-    `}
-    cursor: pointer;
+    background-color: ${({ theme, dull, disabled }) =>
+      disabled || dull ? theme.bgLight : theme.primary};
+    color: ${({ theme, dull, disabled }) =>
+      disabled || dull ? theme.text_secondary : theme.text_primary};
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
     text-decoration: none;
     transition: all 0.5s ease;
     &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
+        background-color: ${({ theme, disabled }) =>
+          disabled ? theme.bgLight : theme.primary + 99};
     }
     @media only screen and (max-width: 600px) {
         font-size: 12px;
@@ -226,8 +222,19 @@ const index = ({ openModal, setOpenModal }) => {
                         </>
                     )}
                     <ButtonGroup>
-                        <Button dull href={project?.github} target='new'>View Code</Button>
-                        <Button href={project?.webapp} target='new'>View Live App</Button>
+                        {project?.webapp && (
+                          <Button href={project.webapp} target='new'>View Live App</Button>
+                        )}
+                        {project?.webapp === null && (
+                          <Button
+                            disabled
+                            href="#"
+                            onClick={(e) => e.preventDefault()}
+                            title="This tool does not have a live URL available"
+                          >
+                            View Live App
+                          </Button>
+                        )}
                     </ButtonGroup>
                 </Wrapper>
             </Container>
